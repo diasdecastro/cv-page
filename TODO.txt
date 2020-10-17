@@ -1,0 +1,13 @@
+Implement send message: send email
+
+Dont forget: Home button for every page
+
+Animate everything
+
+Use a nice Font
+
+Hide Samples from service
+
+translate everything
+
+repair scroll (service page)

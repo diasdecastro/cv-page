@@ -1,0 +1,54 @@
+
+body {
+    background: url(../resources/backgr.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black black;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+  background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #CFD8DC ;
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+
+
+.App {    
+    color: white;    
+}
+
+.goHome {
+    position: fixed;
+    bottom: 2vw;
+    right: 0.8vw;
+    line-height: 48px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid yellow;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.7em;
+    color: yellow;
+}
+
+.goHome:hover {
+    cursor: pointer;
+    color: black;
+    background-color: yellow;
+    border-color: black;
+}
