@@ -2,9 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Transition } from 'react-transition-group';
 import { Document, Page, pdfjs } from 'react-pdf';
 import file from "./Beta.pdf";
-import throttle from 'lodash.throttle';
 import axios from 'axios';
-import logo from './logo.svg';
+/* import logo from './logo.svg'; */
 
 import './resources/hamburger.css';
 
@@ -12,7 +11,6 @@ import './stylesWide/App.css';
 import './stylesWide/Header.css';
 import './stylesWide/HomePage.css';
 import './stylesWide/ContactPage.css';
-import './stylesWide/ServicePage.css';
 import './stylesWide/PortfolioPage.css';
 import './stylesWide/CvPage.css';
 
@@ -21,10 +19,8 @@ import './stylesMobile/ContactPageMobile.css';
 import './stylesMobile/HeaderMobile.css';
 import './stylesMobile/HomePageMobile.css';
 import './stylesMobile/PortfolioPageMobile.css';
-import './stylesMobile/ServicePageMobile.css';
 import './stylesMobile/CvPageMobile.css';
 
-// import { response } from 'express';
 
 /* pdfjs.GlobalWorkerOptions.workerSrc = "https://cdn.bootcss.com/pdf.js/2.2.228/pdf.worker.js"; */
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -125,7 +121,6 @@ class App extends React.Component {
                         this.setState({fadeProp: false});
                       }                      
                     }
-                    language={this.state.language}
                     />
                 </div>
                 
@@ -187,14 +182,9 @@ class Header extends React.Component {
 
             {/* header menu */}
             <ul className="headerMenu">
-                {/* <li onClick={() => {
-                  this.toggleMenu();
-                  this.props.changePage("service");
-                } }>Service</li> */}
                 <li onClick={() => {
                   this.toggleMenu();
                   window.open("https://github.com/diasdecastro", "_blank")
-                  // this.props.changePage("portfolio");
                 } }>Portfolio</li>
                 <li onClick={() => {
                   this.toggleMenu();
@@ -224,11 +214,6 @@ function Footer(props) {
     <div className="footerContainer">
       <footer className="footer">
         <p className="copyright">&copy; Copyright 2020 Cristian Dias de Castro</p>
-        {/* <div className="footerLinks">
-          <a className="imprintLink">{(props.language === "en") ? "Imprint" : "Impressum"}</a>
-          <span> | </span>
-          <a className="privacyLink">{(props.language === "en") ? "Privacy Policy" : "Datenschutzerklärung"}</a>
-        </div> */}
       </footer>
     </div>
   )
@@ -255,31 +240,12 @@ function MainContent(props) {
       </div>
     );
 
-  } else if (props.page === "portfolio") {
-
-    return (
-      <div>
-        <PortfolioPage changePage={props.changePage} language={props.language} />
-      </div>
-    );
-
-  } else if (props.page === "service") {
-
-    return (      
-      <div>
-        <ServicePage changePage={props.changePage} language={props.language} />
-      </div>
-    );
   } else if (props.page === "thankyou") {
     return (
       <div>
         <ThankyouPage changePage={props.changePage} language={props.language} />
       </div>
-    )
-  } else if (props.page === "imprint") {
-        
-  } else if (props.page === "privacy") {
-    
+    );
   } else if (props.page === "cv") {
     return (
       <div>
@@ -294,8 +260,6 @@ function HomePage(props) {
 
   const myRef = useRef(null);
   const executeScroll = () => scrollToRef(myRef);
-
-  // props.updateFade();
 
   return (
     <div className="mainContent">
@@ -362,15 +326,6 @@ function HomePage(props) {
 
       </div>
   );
-}
-
-class ContactProject extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      question1: "",
-    }
-  }
 }
 
 class ContactGeneral extends React.Component {
@@ -520,92 +475,6 @@ class ThankyouPage extends React.Component {
     )
   }  
 }
-
-function PortfolioPage(props) {
-  return (
-    <div className="portfolioMainContent">
-      <h1 className="portfolioTitle">Portfolio</h1>
-      <div className="goHome" onClick={() => props.changePage("home")}><i className="fa fa-home"></i></div>
-    </div>    
-  )
-}
-
-function ServicePage(props) {
-
-  const myRef = useRef(null);
-  const executeScroll = () => scrollToRef(myRef);
-
-  return (
-    <div className="serviceMainContent">
-
-      <div className="aboutContainer">
-
-        <div className="aboutService">
-          <h1 className="aboutTitle">My service</h1>
-          <p className="aboutParagraph">
-            My service ist this, that and that and this an ah! Bla
-            Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-            Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-            Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-            Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-            Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
-          </p>
-        </div>
-
-        <h2 className="sampleBoxTitle">Check it out!</h2>
-        <div className="showSamples" onClick={executeScroll}><i className="fa fa-arrow-down"></i></div>       
-      
-      </div>      
-      
-      <div className="sampleBox" ref={myRef}>
-        
-        <div className="sampleItems">
-
-          <article className="sample1">
-            <h3 className="sampleTitle">Sample 1</h3>
-            <div className="sampleImg"><img src="" /></div>
-            <div className="sampleDescription">
-              <p>
-                This is a small description of the sample. Not more
-                then 2-3 sentences and a "link" to the sample. This is a small description of the sample. Not more
-                then 2-3 sentences and a "link" to the sample. <i className="fa fa-arrow-right"></i>
-              </p>
-            </div>
-          </article>
-
-          <article className="sample2">
-            <h3 className="sampleTitle">Sample 2</h3>
-            <div className="sampleImg"><img src="" /></div>
-            <div className="sampleDescription">
-              <p>
-                This is a small description of the sample. Not more
-                then 2-3 sentences and a "link to the sample" <i className="fa fa-arrow-right"></i>
-              </p>
-            </div>
-          </article>
-
-          <article className="sample3">
-            <h3 className="sampleTitle">Sample 3</h3>
-            <div className="sampleImg"><img src="" /></div>
-            <div className="sampleDescription">
-              <p>
-                This is a small description of the sample. Not more
-                then 2-3 sentences and a "link to the sample" <i className="fa fa-arrow-right"></i>
-              </p>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-        
-
-      <div className="goHome" onClick={() => props.changePage("home")}><i className="fa fa-home"></i></div>
-    </div>
-  );
-}
-
-
 
 function CvPage(props) {  
   const [numPages, setNumPages] = useState(null);
