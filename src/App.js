@@ -4,7 +4,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import file from "./Beta.pdf";
 import throttle from 'lodash.throttle';
 import axios from 'axios';
-/* import logo from './logo.svg'; */
+import logo from './logo.svg';
 
 import './resources/hamburger.css';
 
