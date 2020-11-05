@@ -1,13 +1,38 @@
-Implement send message: send email
 
-Dont forget: Home button for every page
+responsive design --- done?
 
-Animate everything
+Dont forget: Home button for every page --- done
 
-Use a nice Font
+Animate everything --- done
 
-Hide Samples from service
+Use a nice Font --- done
+
+repair scroll (service page) --- done
+
+Hide Samples from service --- dine
+
+links in new tab --- done
+
+brackets tab icon --- done
+
+mobile optimization --- done?
+
+Implement send message: send email --- done
+
+contact form add : email(required), firstname (required), lastname (required) --- done
+
+format email text format on backend
+
+impressum page, why do i have to have an impressum page
+
+tablet optimization
+
+fill content
 
 translate everything
 
-repair scroll (service page)
+picture
+
+implement cookie consent tool
+
+implement google analytics

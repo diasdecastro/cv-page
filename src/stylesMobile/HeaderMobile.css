@@ -1,0 +1,157 @@
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    /* //CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* //CSS */
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* //CSS */
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* //CSS */
+
+    header {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        overflow: hidden;
+        height: 15em;
+    }
+
+    .hidden{
+      max-height: 3em; 
+      -webkit-transition: max-height .5s; 
+      -moz-transition: max-height .5s; 
+      -ms-transition: max-height .5s; 
+      -o-transition: max-height .5s; 
+      transition: max-height .5s;  
+    }
+  
+    .collapse {
+      max-height: 15em;
+      -webkit-transition: max-height .5s; 
+      -moz-transition: max-height .5s; 
+      -ms-transition: max-height .5s; 
+      -o-transition: max-height .5s; 
+      transition: max-height .5s;    
+    }
+
+    .left {
+        width: 20vw;
+    }
+
+    .right {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }    
+
+    .hamburgerMenu {
+        display: flex;
+        justify-content: flex-end;   
+        align-items: center;
+        position: relative;
+    }
+
+    
+
+    #hamburgerBtn, 
+    #hamburgerBtn:hover,
+     #hamburgerBtn:active,
+      #hamburgerBtn:active:focus,
+       #hamburgerBtn:visited,
+        #hamburgerBtn:focus {
+            outline: none;
+            box-shadow: none;
+            transform: scale(.6) translateY(1.6em);
+            padding-right: 0;
+            position: absolute;
+     }
+
+     .headerMenu {
+      display: table;
+      text-align: right;
+      transform: translateY(3em);
+    }
+
+    .headerMenu > li:hover::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 15px;
+      width: 60%;
+      margin: 0 0 0 -30%;
+      border-bottom: 0;
+    }
+
+    .right > .separator {
+      display: none;      
+    }
+
+    .mobileSeparator {
+      display: block;
+      text-align: right;
+      margin: 1em 2vw 1em 0;
+      font-weight: bold;
+      transform: translateY(3em);
+    }
+
+    .language {
+      display: table;
+      text-align: right;
+      transform: translateY(3em);
+    }
+
+    .language > li {
+      display: inline;
+      height: auto;  
+      margin-right: 2vw;    
+    }
+
+    .language > li:hover::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 15px;
+      width: 50%;
+      margin: 0 0 0 -25%;
+      border-bottom: 0;
+    }
+
+    .german {
+      margin-right: 3vw;
+    }  
+    
+  } 

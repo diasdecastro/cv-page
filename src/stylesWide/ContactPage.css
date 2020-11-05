@@ -1,0 +1,104 @@
+.contactMainContent {
+    padding-top: 3em;    
+}
+
+.contactHeader {
+    width: 40%;
+    margin: 2em auto 0.5em auto;
+    text-align: center;
+}
+
+label {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+#messageForm {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+}
+
+input[name="firstname"], input[name="lastname"], input[name="subject"], input[name="email"] {
+    height: 2em;
+    padding-left: 10px;
+    margin-bottom: 0.5em;
+}
+
+.nameLabelContainer > label {
+    display: block;
+    float: left;
+}
+
+label[for="firstname"] {
+    width: 50%;
+}
+
+
+.nameFormContainer  input {
+    width: 80%;
+}
+
+.firstnameContainer, .lastnameContainer {
+    width: 50%;
+    margin: 0;
+    float: left;
+    overflow: hidden;
+}
+
+
+
+input[name="lastname"] {
+    width: 100%;
+}
+
+textarea[name="message"] {
+    height: 15em;
+    padding: 10px;
+    margin-bottom: 1em;
+}
+
+input[type="submit"] {
+    width: 30%;
+    height: 3em;
+    margin: 0 auto;
+    background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+    border: 1px solid white ;
+    margin-top: 1em;
+}
+
+input[type="submit"]:hover {
+    color: black;
+    background-color: white;
+    
+}
+
+.email {
+    width: 40%;
+    margin: 1em auto 1em auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+label[for="consentCheck"] {
+    width: 70%;
+    font-size: 1em;
+}
+
+.thankyou {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+

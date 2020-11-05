@@ -1,0 +1,13 @@
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .cv {
+        padding-top: 2em;
+    }
+
+    .react-pdf__Page__canvas {
+        max-height: 85vh ! important;
+        max-width: 95vw! important;        
+    }
+
+  }
+ 

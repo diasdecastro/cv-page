@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Work+Sans:wght@100&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {    
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    scrollbar-width: thin;
+    scrollbar-color: black black;    
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../resources/backgr.jpg);
+  background-size: cover;
+  z-index: -1;
+}
+
+body::-webkit-scrollbar {
+  width: 16px;
+  background: none;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #CFD8DC ;
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.scrollable-content::-webkit-scrollbar * {
+  background:transparent;
+}
+
+.App {    
+    color: white;    
+}
+
+.goHome {
+    position: fixed;
+    bottom: 2vw;
+    right: 0.8vw;
+    line-height: 48px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid yellow;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.7em;
+    color: yellow;
+}
+
+.goHome:hover {
+    cursor: pointer;
+    color: black;
+    background-color: yellow;
+    border-color: black;
+}
+
+.footer {  
+  border-top: 1px solid white;
+  margin-top: 1vh;
+}
+
+.copyright {
+  margin-left: 4vw;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4vw;
+}
+
+.footer span {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 1vh;
+}
+
+
+
+/* Fade-in animation on state changes */
+
+/* .main-fadein-content-enter {
+  opacity: 0;
+}
+.main-fadein-content-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.main-fadein-content-exit {
+  opacity: 1;
+}
+.main-fadein-content-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+} */
+
