@@ -370,7 +370,7 @@ class ContactGeneral extends React.Component {
       }
     }
     
-    axios.post('http://localhost:5000/sendContactForm', data, headers)
+    axios.post('https://sendmail-plus.herokuapp.com/sendContactForm', data, headers)
       .then(res => {
         if (res.data === "Success") {
           this.props.changePage("thankyou");
