@@ -443,7 +443,7 @@ class ContactGeneral extends React.Component {
                   onChange={this.handleChange}       
                   required            
                   />
-                <label htmlFor="consentCheck"> {(this.props.language === "en") ? "Consent blabla" : "Einverstanden blabsl"} </label>
+                <label htmlFor="consentCheck"> {(this.props.language === "en") ? "I agree " : "Ich bin damit einverstanden, dass die oben angegebenen Daten gelesen und zum Zweck einer Antwort benutzt werden"} </label>
               </div>
 
             <input type="submit" 
@@ -451,8 +451,8 @@ class ContactGeneral extends React.Component {
 
               />
           </form>
-          <div className="goHome" onClick={() => this.props.changePage("home")}><i className="fa fa-home"></i></div>
-          <div className="email">{(this.props.language === "en") ? "Or send an email to" : "Oder sende eine Email an"}: cristian.diass@hotmail.com</div>
+{/*           <div className="goHome" onClick={() => this.props.changePage("home")}><i className="fa fa-home"></i></div>
+ */}          <div className="email">{(this.props.language === "en") ? "Or send an email to" : "Oder sende eine Email an"}: cristian.diass@hotmail.com</div>
       </div>    
     );    
   }
